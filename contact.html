@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="stylepersonal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -18,40 +18,49 @@
 
 
     <div class="header">
-        <a href="Home Page.html"><img src="Logo.svg" alt="Clickable Image" height="75px"></a>
+        <a href="index.html"><img src="Logo.svg" alt="Clickable Image" height="75px"></a>
         <ul class="nav">
-            <li><a href="Home Page.html" class="link1">Home</a></li>
+            <li><a href="index.html" class="link1">Home</a></li>
             <li><a href="contact.html" class="link2">Contact</a></li>
             <li><a href="experience.html" class="link3">Experience</a></li>
+            <li><a href="games.html" class="link4">Games</a></li>
         </ul>
     </div>
+    
 
     <div class="section">
 
-        <div class="shapes">
+        <div class="shapes" id="shapes">
             <div class="shape-one"></div>
             <div class="shape-two"></div>
             <div class="shape-three"></div>
         </div>
 
         <div class="container">
-            <form class="schedule">
+            <div class="schedule">
                 <div class="form-control">
-                    <input type="text" name="name" placeholder="Name/Company" required>
+                    <input type="text" name="name" placeholder="Name/Company" id=name >
                 </div>
                 <div class="form-control">
-                    <input type="tel" name="phone number" placeholder="Phone Number" required>
+                    <input type="tel" name="phone number" placeholder="Phone Number" id="number" >
                 </div>
                 <div class="form-control">
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" id="email">
                 </div>
                 <div class="form-control">
-                    <input type="text" name="info" placeholder="Additional Info" >
+                    <input type="text" name="info" placeholder="Additional Info" id="info" >
                 </div>
                 <div>
-                    <input type="submit" value="Send" class="btn btn-primary">
+                    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
                 </div>
-            </form>
+                <div class="popup" id="popup">
+                    <img src="Logo.svg" alt="laptop with pixles coming out of it">
+                    <h2>Thank You!</h2>
+                    <p>Your information has been successfully submitted.</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+                
+            </div>
         </div>
     </div>
     
@@ -73,5 +82,6 @@
             <p>Email: katenia2001@gmail.com</p>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
